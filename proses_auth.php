@@ -1,20 +1,6 @@
 <?php
 session_start();
-
-// ==========================================
-// 1. KONEKSI KE DATABASE
-// ==========================================
-$host = "localhost";
-$user = "root";
-$pass = "";
-$db   = "genheals_db";
-
-$conn = new mysqli($host, $user, $pass, $db);
-
-// Cek Koneksi
-if ($conn->connect_error) {
-    die("Koneksi gagal: " . $conn->connect_error);
-}
+require_once("koneksi.php");
 
 // ==========================================
 // 2. LOGIKA AUTENTIKASI
